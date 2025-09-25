@@ -36,11 +36,11 @@ This project demonstrates dynamic data handling, modern UI, and professional dev
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/aamamunszone/customer-support-zone.git
+   git clone https://github.com/aamamunszone/b12a07-customer-support-zone.git
    ```
 2. Navigate to project folder
    ```bash
-   cd customer-support-zone
+   cd b12a07-customer-support-zone
    ```
 3. Install dependencies
    ```bash
