@@ -5,13 +5,15 @@ import HomePage from '../../pages/Home/HomePage';
 
 const MainLayout = () => {
   return (
-    <div className="flex flex-col justify-between gap-16 min-h-screen">
+    <div className="flex flex-col justify-between min-h-screen">
       {/* Header Section */}
       <Header />
 
       {/* Main Section */}
-      <main className="container flex flex-col gap-16 mx-auto h-[200px] flex-1">
-        <HomePage />
+      <main className="bg-[#f5f5f5]">
+        <div className="container flex flex-col gap-16 py-16 mx-auto flex-1">
+          <HomePage />
+        </div>
       </main>
 
       {/* Footer Section */}

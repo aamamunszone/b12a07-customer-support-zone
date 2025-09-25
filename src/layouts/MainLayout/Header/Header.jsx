@@ -47,14 +47,14 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <a className="font-bold text-2xl tracking-wider cursor-pointer hover:text-[forestgreen]">
+          <a className="font-bold text-2xl tracking-wider cursor-pointer text-[#02A53B] whitespace-nowrap">
             CS — Ticket System
           </a>
         </div>
 
         <div className="navbar-end flex justify-end items-center gap-4">
-          <div className=" hidden lg:flex ">
-            <ul className="menu menu-horizontal px-1 flex justify-between items-center gap-4">
+          <div className=" hidden lg:flex">
+            <ul className="menu menu-horizontal px-1 flex flex-nowrap justify-between items-center gap-4">
               <li>
                 <a>Home</a>
               </li>
@@ -75,7 +75,7 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <a className=" py-2 px-3 rounded-md bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white cursor-pointer">
+          <a className=" py-2 px-3 rounded-md bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white cursor-pointer whitespace-nowrap">
             <span> + </span> New Ticket
           </a>
         </div>
