@@ -11,7 +11,9 @@ const Footer = () => {
         {/* Top Footer */}
         <footer className="footer grid lg:grid-cols-5 lg:justify-items-end gap-10 px-5 lg:px-0 py-20 border-b border-white/30">
           <aside>
-            <h6 className="font-medium text-2xl mb-5 whitespace-nowrap">CS — Ticket System</h6>
+            <h6 className="font-medium text-2xl mb-5 whitespace-nowrap">
+              CS — Ticket System
+            </h6>
             <p className="text-[#A1A1AA] leading-relaxed">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -46,7 +48,9 @@ const Footer = () => {
             <a className="link link-hover text-[#A1A1AA] mb-4">Join Us</a>
           </nav>
           <nav>
-            <h6 className="font-medium text-[20px] mb-4 whitespace-nowrap">Social Links</h6>
+            <h6 className="font-medium text-[20px] mb-4 whitespace-nowrap">
+              Social Links
+            </h6>
 
             <div className="flex gap-4">
               <FaXTwitter className="text-[20px]" />

@@ -1,15 +1,34 @@
-import React from 'react';
+import React, { Suspense, use } from 'react';
 import HeroSection from './components/HeroSection';
 import DashboardSection from './components/DashboardSection';
 
-const HomePage = () => {
+const HomePage = ({
+  ticketsPromise,
+  handleTicketCardClick,
+  inProgressCount,
+  statusCard,
+}) => {
+  // console.log(ticketsPromise);
+
+  const ticketsData = use(ticketsPromise);
+
+  // console.log(ticketsData);
+
+  const tickets = ticketsData.tickets;
+
+  // console.log(tickets);
+
   return (
     <>
       {/* Hero Section */}
-      <HeroSection />
+      <HeroSection inProgressCount={inProgressCount} />
 
       {/* Dashboard Section */}
-      <DashboardSection />
+      <DashboardSection
+        tickets={tickets}
+        handleTicketCardClick={handleTicketCardClick}
+        statusCard={statusCard}
+      />
     </>
   );
 };
