@@ -39,7 +39,7 @@ const DashboardSection = ({
       </div>
 
       {/* Status Section */}
-      <div className="col-span-1 lg:col-span-2 space-y-8">
+      <div className="col-span-1 lg:col-span-2 space-y-8 sticky top-24 self-start max-h-screen overflow-y-auto">
         {/* Task Status */}
         <div className="space-y-5">
           <h2 className="font-semibold text-2xl whitespace-nowrap">
