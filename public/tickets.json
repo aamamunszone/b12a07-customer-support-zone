@@ -7,7 +7,7 @@
       "title": "Payment Gateway Error - Transaction Timeout",
       "description": "Customer experienced a timeout during checkout process while attempting to purchase Premium Business Plan. Payment of $299.99 was debited from their account but order confirmation was not received. Requires immediate investigation and refund processing.",
       "customer": "Alexander Mitchell",
-      "priority": "HIGH",
+      "priority": "URGENT",
       "status": "Open",
       "createdAt": "01/15/2024"
     },
@@ -25,7 +25,7 @@
       "title": "Database Connection Pool Exhaustion",
       "description": "Customer's application is experiencing intermittent connection failures during peak hours (2-4 PM EST). Error logs show connection pool exhaustion. They're losing approximately $500/hour in revenue during outages.",
       "customer": "Emma Rodriguez",
-      "priority": "HIGH",
+      "priority": "URGENT",
       "status": "Open",
       "createdAt": "01/17/2024"
     },
@@ -34,7 +34,7 @@
       "title": "SSL Certificate Renewal Failed",
       "description": "Customer's website SSL certificate failed to auto-renew causing browser security warnings. Their e-commerce site is now showing 'Not Secure' warnings affecting customer trust and sales conversion rates.",
       "customer": "Marcus Thompson",
-      "priority": "HIGH",
+      "priority": "MEDIUM",
       "status": "Open",
       "createdAt": "01/18/2024"
     },
@@ -43,7 +43,7 @@
       "title": "Multi-Factor Authentication Loop Error",
       "description": "Customer is stuck in an infinite MFA verification loop. After entering the correct OTP, the system redirects back to MFA prompt. Unable to access dashboard for 48+ hours. Phone number verified as correct.",
       "customer": "Sarah Chen-Williams",
-      "priority": "HIGH",
+      "priority": "DEFAULT",
       "status": "Open",
       "createdAt": "01/19/2024"
     },
@@ -52,7 +52,7 @@
       "title": "Bulk Data Export Memory Overflow",
       "description": "Customer attempting to export 2.5M records encounters memory overflow error. Export process fails at 45% completion. They need this data for quarterly audit compliance by January 31st deadline.",
       "customer": "GlobalTech Analytics",
-      "priority": "MEDIUM",
+      "priority": "HIGH",
       "status": "Open",
       "createdAt": "01/20/2024"
     },
@@ -70,7 +70,7 @@
       "title": "GDPR Data Deletion Request Incomplete",
       "description": "Customer submitted GDPR Article 17 'Right to be Forgotten' request 15 days ago. While main profile was deleted, backup systems and cached data still contain personal information. Legal compliance at risk.",
       "customer": "Victoria Larsson",
-      "priority": "MEDIUM",
+      "priority": "LOW",
       "status": "Open",
       "createdAt": "01/22/2024"
     },
@@ -79,7 +79,7 @@
       "title": "CDN Cache Invalidation Not Working",
       "description": "Customer updated their website content 6 hours ago but changes are not reflecting globally. CDN cache invalidation requests return success but old content persists in 15+ edge locations worldwide.",
       "customer": "Phoenix Creative Agency",
-      "priority": "MEDIUM",
+      "priority": "DEFAULT",
       "status": "Open",
       "createdAt": "01/23/2024"
     },
@@ -88,7 +88,7 @@
       "title": "OAuth 2.0 Scope Permission Escalation",
       "description": "Customer's application is requesting elevated permissions that weren't part of initial OAuth consent. Users are receiving unexpected permission prompts causing 67% drop in successful authentication flows.",
       "customer": "DevTools Pro Ltd",
-      "priority": "MEDIUM",
+      "priority": "URGENT",
       "status": "Open",
       "createdAt": "01/24/2024"
     },
@@ -115,7 +115,7 @@
       "title": "Container Orchestration Resource Limits",
       "description": "Customer's Kubernetes pods are being terminated due to memory limits during traffic spikes. Current allocation: 2GB RAM, actual usage peaks at 3.2GB during promotional campaigns causing service disruptions.",
       "customer": "StreamLine Media",
-      "priority": "MEDIUM",
+      "priority": "LOW",
       "status": "Open",
       "createdAt": "01/27/2024"
     },
@@ -124,7 +124,7 @@
       "title": "JWT Token Signature Validation Error",
       "description": "Customer's mobile app users experiencing random logout issues. JWT tokens are being rejected with 'invalid signature' errors despite being within expiration time. Affects 23% of iOS users specifically.",
       "customer": "FitTrack Health App",
-      "priority": "MEDIUM",
+      "priority": "DEFAULT",
       "status": "Open",
       "createdAt": "01/28/2024"
     },
@@ -142,7 +142,7 @@
       "title": "Terraform State File Corruption",
       "description": "Customer's infrastructure deployment pipeline failed due to corrupted Terraform state file. Unable to apply changes or rollback. Production environment is stable but no updates can be deployed.",
       "customer": "CloudFirst Engineering",
-      "priority": "LOW",
+      "priority": "MEDIUM",
       "status": "Open",
       "createdAt": "01/30/2024"
     },
@@ -160,7 +160,7 @@
       "title": "Redis Cluster Split-Brain Syndrome",
       "description": "Customer's caching layer experiencing split-brain condition causing data inconsistencies. Session data differs between nodes leading to users being randomly logged out or seeing stale information.",
       "customer": "SessionManager Corp",
-      "priority": "MEDIUM",
+      "priority": "DEFAULT",
       "status": "Open",
       "createdAt": "02/01/2024"
     },
@@ -169,7 +169,7 @@
       "title": "Certificate Authority Chain Validation Error",
       "description": "Customer's API clients failing SSL handshake due to incomplete certificate chain. Root CA certificate missing from server configuration. Mobile apps showing 'untrusted certificate' warnings.",
       "customer": "SecureAPI Gateway",
-      "priority": "MEDIUM",
+      "priority": "HIGH",
       "status": "Open",
       "createdAt": "02/02/2024"
     },
@@ -187,7 +187,7 @@
       "title": "MongoDB Replica Set Primary Election Failure",
       "description": "Customer's database cluster unable to elect primary node after maintenance window. All nodes stuck in secondary state causing read-only mode. Application writes failing for 45+ minutes.",
       "customer": "DataStream Analytics",
-      "priority": "HIGH",
+      "priority": "LOW",
       "status": "Open",
       "createdAt": "02/04/2024"
     },
@@ -196,7 +196,7 @@
       "title": "Content Security Policy Violation Blocking Assets",
       "description": "Customer's recent CSP implementation blocking legitimate third-party resources including payment processors and analytics. Checkout conversion rate dropped 89% since CSP deployment yesterday.",
       "customer": "ShopFlex E-commerce",
-      "priority": "HIGH",
+      "priority": "DEFAULT",
       "status": "Open",
       "createdAt": "02/05/2024"
     },
@@ -205,7 +205,7 @@
       "title": "Apache Kafka Partition Rebalancing Issues",
       "description": "Customer's event streaming pipeline experiencing excessive partition rebalancing causing message processing delays. Consumer groups frequently triggering rebalances affecting real-time data processing.",
       "customer": "EventFlow Technologies",
-      "priority": "LOW",
+      "priority": "URGENT",
       "status": "Open",
       "createdAt": "02/06/2024"
     },
@@ -214,7 +214,7 @@
       "title": "DNS Propagation Delay for Custom Domain",
       "description": "Customer's custom domain (app.clientdomain.com) showing DNS propagation delays in Asian regions. Users in Japan, Singapore, and Hong Kong unable to access application for 6+ hours.",
       "customer": "GlobalReach Solutions",
-      "priority": "LOW",
+      "priority": "MEDIUM",
       "status": "Open",
       "createdAt": "02/07/2024"
     },
@@ -223,7 +223,7 @@
       "title": "Load Balancer Health Check False Negatives",
       "description": "Customer's application instances being marked unhealthy despite functioning correctly. Health check endpoint /health returning 200 but load balancer routing traffic to fewer instances causing performance degradation.",
       "customer": "ScaleMax Infrastructure",
-      "priority": "MEDIUM",
+      "priority": "HIGH",
       "status": "Open",
       "createdAt": "02/08/2024"
     },
@@ -232,7 +232,7 @@
       "title": "RabbitMQ Message Queue Deadlock Condition",
       "description": "Customer's message processing stuck in deadlock condition. Messages accumulating in queue (currently 45,000+ pending) but consumers unable to process due to resource contention on shared database connections.",
       "customer": "MessageFlow Systems",
-      "priority": "HIGH",
+      "priority": "LOW",
       "status": "Open",
       "createdAt": "02/09/2024"
     },
@@ -241,7 +241,7 @@
       "title": "S3 Cross-Region Replication Lag",
       "description": "Customer's disaster recovery setup experiencing 45+ minute replication lag between us-east-1 and eu-west-1. Recent objects not appearing in backup region within acceptable RTO of 15 minutes.",
       "customer": "BackupPro Services",
-      "priority": "LOW",
+      "priority": "DEFAULT",
       "status": "Open",
       "createdAt": "02/10/2024"
     },
@@ -250,7 +250,7 @@
       "title": "Docker Registry Pull Rate Limit Exceeded",
       "description": "Customer's CI/CD pipeline failing due to Docker Hub pull rate limits. Build processes timing out during image pull phase. Anonymous pulls exceeded 100/6hrs limit, authenticated pulls at 200/6hrs limit.",
       "customer": "DevOps Automation Co",
-      "priority": "LOW",
+      "priority": "MEDIUM",
       "status": "Open",
       "createdAt": "02/11/2024"
     },
@@ -259,7 +259,7 @@
       "title": "ElasticSearch Cluster Yellow State Recovery",
       "description": "Customer's search cluster stuck in yellow state for 72+ hours after node failure. Primary shards healthy but replica shards unallocated. Search performance degraded and no fault tolerance available.",
       "customer": "SearchTech Solutions",
-      "priority": "MEDIUM",
+      "priority": "HIGH",
       "status": "Open",
       "createdAt": "02/12/2024"
     },
@@ -276,8 +276,10 @@
   "metadata": {
     "totalTickets": 30,
     "openTickets": 30,
-    "highPriorityTickets": 8,
-    "mediumPriorityTickets": 14,
+    "urgentPriorityTickets": 4,
+    "highPriorityTickets": 6,
+    "mediumPriorityTickets": 6,
+    "defaultPriorityTickets": 6,
     "lowPriorityTickets": 8,
     "averageResolutionTime": "4.2 hours",
     "lastUpdated": "02/13/2024",

@@ -10,28 +10,32 @@ const DashboardSection = ({
   handleComplete,
   resolvedCard,
 }) => {
-  // console.log(statusCard);
   return (
     <section className="grid grid-cols-3 lg:grid-cols-8 gap-8">
       {/* Ticket Section */}
       <div className="col-span-2 lg:col-span-6 grid grid-cols-1 lg:grid-cols-2 gap-5">
         <h2 className="col-span-1 lg:col-span-2 font-semibold text-2xl whitespace-nowrap">
-          Customer Tickets : {tickets.length}
+          Customer Tickets : {tickets.length - resolvedCard.length}
         </h2>
-        {/* Ticket Card */}
 
-        {tickets.map((ticket) => {
-          // Update Ticket Card for Status Changing
-          const updatedTicket =
-            statusCard.find((t) => t.id === ticket.id) || ticket;
-          return (
-            <TicketCard
-              key={ticket.id}
-              ticket={updatedTicket}
-              handleTicketCardClick={handleTicketCardClick}
-            />
-          );
-        })}
+        {/* Ticket Card */}
+        {tickets
+          .filter((ticket) => {
+            const isResolved = resolvedCard.some((t) => t.id === ticket.id);
+            return !isResolved;
+          })
+          .map((ticket) => {
+            // Update Ticket Card for Status Changing
+            const updatedTicket =
+              statusCard.find((t) => t.id === ticket.id) || ticket;
+            return (
+              <TicketCard
+                key={ticket.id}
+                ticket={updatedTicket}
+                handleTicketCardClick={handleTicketCardClick}
+              />
+            );
+          })}
       </div>
 
       {/* Status Section */}

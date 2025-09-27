@@ -3,7 +3,21 @@ import { FaCircle } from 'react-icons/fa';
 import { CiCalendar } from 'react-icons/ci';
 
 const TicketCard = ({ ticket, handleTicketCardClick }) => {
-  // console.log(statusCard);
+  const getPriorityColor = (priority) => {
+    switch (priority.toUpperCase()) {
+      case 'HIGH':
+        return 'text-[#F83044]';
+      case 'MEDIUM':
+        return 'text-[#FEBB0C]';
+      case 'LOW':
+        return 'text-[#02A53B]';
+      case 'URGENT':
+        return 'text-[#8B0000]';
+      default:
+        return 'text-[#627382]';
+    }
+  };
+
   return (
     <>
       <div
@@ -35,7 +49,9 @@ const TicketCard = ({ ticket, handleTicketCardClick }) => {
         <div className="w-full py-2 flex justify-between items-center text-[#627382]">
           <div className="flex justify-between items-center gap-4">
             <span># {ticket.id}</span>
-            <span className="text-[#F83044] font-medium">
+            <span
+              className={`font-medium ${getPriorityColor(ticket.priority)}`}
+            >
               {ticket.priority} PRIORITY
             </span>
           </div>
