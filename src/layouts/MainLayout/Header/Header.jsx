@@ -47,7 +47,7 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <a className="font-bold text-2xl tracking-wider cursor-pointer text-[#02A53B] whitespace-nowrap">
+          <a className="font-bold lg:text-2xl tracking-wider cursor-pointer text-[#02A53B] whitespace-nowrap">
             CS — Ticket System
           </a>
         </div>
@@ -75,7 +75,7 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <a className=" py-2 px-3 rounded-md bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white cursor-pointer whitespace-nowrap">
+          <a className="py-1 px-2 lg:py-2 lg:px-3 rounded-md bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white cursor-pointer whitespace-nowrap">
             <span> + </span> New Ticket
           </a>
         </div>

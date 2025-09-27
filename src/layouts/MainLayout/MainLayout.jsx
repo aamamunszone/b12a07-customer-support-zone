@@ -94,7 +94,7 @@ const MainLayout = () => {
         }
       >
         <main className="bg-[#f5f5f5]">
-          <div className="container flex flex-col gap-16 py-16 mx-auto flex-1">
+          <div className="container flex flex-col gap-8 lg:gap-16 px-5 lg:px-0 py-5 lg:py-16 mx-auto flex-1">
             <HomePage
               ticketsPromise={ticketsPromise}
               handleTicketCardClick={handleTicketCardClick}

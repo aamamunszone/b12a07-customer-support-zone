@@ -81,7 +81,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="footer sm:footer-horizontal footer-center  py-8">
           <aside>
-            <p>
+            <p className="text-xs lg:text-base">
               Copyright © {new Date().getFullYear()} - All right reserved by CS
               — Ticket System
             </p>
