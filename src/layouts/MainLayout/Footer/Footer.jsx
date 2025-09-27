@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className=" bg-black text-white">
       <div className="container mx-auto">
         {/* Top Footer */}
-        <footer className="footer grid lg:grid-cols-5 lg:justify-items-end gap-10 px-5 lg:px-0 py-20 border-b border-white/30">
+        <div className="footer grid lg:grid-cols-5 lg:justify-items-end gap-10 px-5 lg:px-0 py-20 border-b border-white/30">
           <aside>
             <h6 className="font-medium text-2xl mb-5 whitespace-nowrap">
               CS — Ticket System
@@ -77,16 +77,16 @@ const Footer = () => {
               </a>
             </div>
           </nav>
-        </footer>
+        </div>
         {/* Bottom Footer */}
-        <footer className="footer sm:footer-horizontal footer-center  py-8">
+        <div className="footer sm:footer-horizontal footer-center  py-8">
           <aside>
             <p>
               Copyright © {new Date().getFullYear()} - All right reserved by CS
               — Ticket System
             </p>
           </aside>
-        </footer>
+        </div>
       </div>
     </footer>
   );

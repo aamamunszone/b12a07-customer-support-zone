@@ -7,6 +7,7 @@ const App = () => {
     <>
       <MainLayout />
 
+      {/* React Toastify Rendering */}
       <ToastContainer />
     </>
   );

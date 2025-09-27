@@ -10,28 +10,68 @@ const fetchTickets = async () => {
 };
 
 const ticketsPromise = fetchTickets();
-
 // console.log(ticketsPromise);
 
 const MainLayout = () => {
   const [inProgressCount, setInProgressCount] = useState(0);
+  const [resolvedCount, setResolvedCount] = useState(0);
   const [statusCard, setStatusCard] = useState([]);
+  const [resolvedCard, setResolvedCard] = useState([]);
 
+  // Card Item Click Handler
   const handleTicketCardClick = (ticket) => {
-    console.log('Ticket Card Clicked.', ticket);
+    // console.log('Ticket Card Clicked.', ticket);
 
-    setInProgressCount((prev) => prev + 1);
+    const alreadyInProgress = statusCard.find((t) => t.id === ticket.id);
 
-    setStatusCard((prev) => [...prev, ticket]);
+    if (!alreadyInProgress) {
+      const updateTicket = { ...ticket, status: 'In Progress' };
 
-    toast.success(`Ticket "${ticket.title}" is now In Progress!`, {
-      position: 'top-right',
+      setInProgressCount((prev) => prev + 1);
+      setStatusCard((prev) => [...prev, updateTicket]);
+
+      toast.success(`Ticket "${ticket.title}" is now In Progress !`, {
+        position: 'top-right',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    } else {
+      toast.info(`Ticket "${ticket.title}" is already In Progress !`, {
+        position: 'top-right',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
+  };
+
+  // Complete Button Click Handler
+  const handleComplete = (ticket) => {
+    // console.log('Complete Button Clicked.', ticket);
+
+    const completedTask = statusCard.find((t) => t.id === ticket.id);
+    if (!completedTask) return;
+
+    // Remove from statusCard
+    setStatusCard((prev) => prev.filter((t) => t.id !== ticket.id));
+    setInProgressCount((prev) => (prev > 0 ? prev - 1 : 0));
+
+    // Add to resolvedCard
+    setResolvedCount((prev) => prev + 1);
+    setResolvedCard((prev) => [...prev, { ...completedTask }]);
+
+    toast.success(`Ticket "${ticket.title}" marked as Completed !`, {
+      position: 'bottom-right',
       autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
-      progress: undefined,
     });
   };
 
@@ -60,6 +100,9 @@ const MainLayout = () => {
               handleTicketCardClick={handleTicketCardClick}
               inProgressCount={inProgressCount}
               statusCard={statusCard}
+              handleComplete={handleComplete}
+              resolvedCount={resolvedCount}
+              resolvedCard={resolvedCard}
             />
           </div>
         </main>
